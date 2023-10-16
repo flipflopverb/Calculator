@@ -2,14 +2,23 @@ let firstNumber = [];
 let secondNumber = [];
 let operator = [];
 const screen = document.querySelector('.displayScreen');
+
 function buttonPress(e) {
   if (operator == false) {
     firstNumber.push(e.target.textContent);
     screen.textContent = firstNumber.join('');
   } else {
     secondNumber.push(e.target.textContent);
-    screen.textContent = secondNumber.join('');
+    screen.textContent =
+      firstNumber.join('') + operator.join('') + secondNumber.join('');
   }
+}
+
+function doTheFunction(e) {
+  secondNumber = [];
+  operator.pop();
+  operator.push(e.target.textContent);
+  screen.textContent = firstNumber.join('') + operator.join('');
 }
 
 function clearScreen() {
@@ -31,52 +40,24 @@ function doTheEqual() {
   } else if (operator[0] == '/') {
     result = x / y;
   }
-  console.log(result);
   screen.textContent = result;
   secondNumber = [];
   firstNumber = [];
   firstNumber.push(result);
 }
 
-/*function doTheFunction(e) {
-  const screen = document.querySelector('.displayScreen');
-  screen.textContent = operator.join('');
-  button = document.querySelector(e.textContent);
-  operator.pop();
-  operator.push(button.textContent);
-  screen.textContent = operator;
-}*/
-
-function doTheAddition() {
-  const screen = document.querySelector('.displayScreen');
-  screen.textContent = operator.join('');
-  operator.pop();
-  operator.push('+');
-  screen.textContent = operator;
-}
-function doTheSubtraction() {
-  const screen = document.querySelector('.displayScreen');
-  screen.textContent = operator.join('');
-  operator.pop();
-  operator.push('-');
-  screen.textContent = operator;
-}
-function doTheMultiplication() {
-  const screen = document.querySelector('.displayScreen');
-  screen.textContent = operator.join('');
-  operator.pop();
-  operator.push('*');
-  screen.textContent = operator;
-}
-function doTheDivision() {
-  const screen = document.querySelector('.displayScreen');
-  screen.textContent = operator.join('');
-  operator.pop();
-  operator.push('/');
-  screen.textContent = operator;
+let numberButtons = document.getElementsByClassName('numberButton');
+for (let i = 0; i <= numberButtons.length; i++) {
+  let x = numberButtons[i];
+  if (x) {
+    x.addEventListener('click', buttonPress);
+  }
 }
 
-let calcButtons = document.getElementsByClassName('numberButton');
-for (let i = 0; i <= 10; i++) {
-  calcButtons[i].addEventListener('click', buttonPress);
+let functionButtons = document.getElementsByClassName('functionButton');
+for (let i = 0; i <= functionButtons.length; i++) {
+  let x = functionButtons[i];
+  if (x) {
+    x.addEventListener('click', doTheFunction);
+  }
 }
