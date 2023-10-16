@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="displayScreen"></div>
+      <div class="userInterface">
+        <div class="numberSection">
+          <div class="buttonRow">
+            <button class="calcButton numberButton">7</button>
+            <button class="calcButton numberButton">8</button>
+            <button class="calcButton numberButton">9</button>
+          </div>
+          <div class="buttonRow">
+            <button class="calcButton numberButton">4</button>
+            <button class="calcButton numberButton">5</button>
+            <button class="calcButton numberButton">6</button>
+          </div>
+          <div class="buttonRow">
+            <button class="calcButton numberButton">1</button>
+            <button class="calcButton numberButton">2</button>
+            <button class="calcButton numberButton">3</button>
+          </div>
+          <div class="buttonRow">
+            <button class="calcButton numberButton">0</button>
+          </div>
+        </div>
+        <div class="functionSection">
+          <button class="calcButton functionButton" onclick="doTheAddition()">
+            +
+          </button>
+          <button
+            class="calcButton functionButton"
+            onclick="doTheSubtraction()"
+          >
+            -
+          </button>
+          <button
+            class="calcButton functionButton"
+            onclick="doTheMultiplication()"
+          >
+            *
+          </button>
+          <button class="calcButton functionButton" onclick="doTheDivision()">
+            /
+          </button>
+          <button class="calcButton" onclick="doTheEqual()">=</button>
+          <button class="calcButton" onclick="clearScreen()">c</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

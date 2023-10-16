@@ -1,0 +1,93 @@
+body {
+  background-color: lightpink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(184, 184, 184);
+  width: 450px;
+  height: 550px;
+  padding: 10px;
+  margin-top: 100px;
+  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+.displaySection {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.displayScreen {
+  display: flex;
+  border: 5px solid black;
+  height: 125px;
+  width: 375px;
+  margin: 10px;
+  margin-top: 20px;
+  background-color: rgb(115, 224, 224);
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 48pt;
+}
+
+.displayScreen:hover {
+  background-color: rgb(148, 241, 241);
+}
+
+.userInterface {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 3;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.calcButton {
+  border: none;
+  outline: none;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 10px;
+}
+
+.calcButton:hover {
+  border: none;
+  outline: none;
+  background-color: rgb(228, 228, 228);
+}
+
+.functionSection {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  justify-content: space-between;
+}
+.functionButton {
+  display: flex;
+  flex: 1;
+  font-size: 24px;
+}
+.numberSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+}
+
+.buttonRow {
+  display: flex;
+  flex: 1;
+}
+
+.numberButton {
+  display: flex;
+  font-size: 24px;
+}
